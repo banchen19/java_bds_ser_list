@@ -1,0 +1,8 @@
+{
+  "server": {
+    "name": "bedrock_server_mod.exe",
+    "IP": "填写服务器IP地址",
+    "port": 19135,
+    "path": "E:\\bds1.19.73\\"
+  }
+}

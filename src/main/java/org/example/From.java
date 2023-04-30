@@ -1,20 +1,12 @@
-package box_menu.banchen;
+package org.example;
 
-public class Form {
+public class From {
     int id;
-    String item_name;
+    String key;
     String name;
-    String type;
-    String command;
-    String command_form;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    String IP;
+    int port;
+    String path;
 
     public int getId() {
         return id;
@@ -24,44 +16,52 @@ public class Form {
         this.id = id;
     }
 
-    public String getItem_name() {
-        return item_name;
+    public String getKey() {
+        return key;
     }
 
-    public void setItem_name(String item_name) {
-        this.item_name = item_name;
+    public void setKey(String key) {
+        this.key = key;
     }
 
-    public String getType() {
-        return type;
+    public String getName() {
+        return name;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getCommand() {
-        return command;
-    }
-
-    public void setCommand(String command) {
-        this.command = command;
-    }
-
-    public String getCommand_form() {
-        return command_form;
-    }
-
-    public void setCommand_form(String command_form) {
-        this.command_form = command_form;
-    }
-
-    public Form(int id, String item_name, String name, String type, String command, String command_form) {
-        this.id = id;
-        this.item_name = item_name;
+    public void setName(String name) {
         this.name = name;
-        this.type = type;
-        this.command = command;
-        this.command_form = command_form;
+    }
+
+    public String getIP() {
+        return IP;
+    }
+
+    public void setIP(String IP) {
+        this.IP = IP;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public From(int id, String key, String name, String IP, int port, String path) {
+        this.id = id;
+        this.key = key;
+        this.name = name;
+        this.IP = IP;
+        this.port = port;
+        this.path = path;
     }
 }

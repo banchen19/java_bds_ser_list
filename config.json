@@ -1,8 +1,0 @@
-{
-  "BIRCH_WOOD": {
-    "type": "command、from、opcommand、opfrom",
-    "name": "别名",
-    "command": "执行指令",
-    "command_from": "目标json文件的地址，如：./plugins/box_menu/config.json"
-  }
-}

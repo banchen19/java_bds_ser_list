@@ -5,7 +5,6 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import java.awt.*;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -13,9 +12,10 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class File_Json_ini {
+public class File_Json {
     //首次创建初始化json文件
-    static String filePath="./config.json";
+    static String filePath = "./config.json";
+
     static void creat_file_json() {
 // 创建一个新的json对象，包含服务器的相关信息
         JsonObject serverObject = new JsonObject();
@@ -36,9 +36,8 @@ public class File_Json_ini {
     }
 
     /**
-     *
-     * @param filePath   json的文件路径
-     * @return   返回JsonObject类型
+     * @param filePath json的文件路径
+     * @return 返回JsonObject类型
      * @throws IOException
      */
     static void read_file_json(String filePath) throws IOException {
@@ -53,13 +52,12 @@ public class File_Json_ini {
         br.close();
         JsonParser parser = new JsonParser();
         jsonObject = parser.parse(sb.toString()).getAsJsonObject();
-        file_to_json(jsonObject);
+        BDS_List.getInstance().setFromList(file_to_json(jsonObject));
     }
 
     /**
-     *
-     * @param jsonObject   解析json
-     * @return   List<Form>
+     * @param jsonObject 解析json
+     * @return List<Form>
      */
     static List<From> file_to_json(JsonObject jsonObject) {
         List<From> formList = new ArrayList<>(); // create a new list
@@ -68,10 +66,10 @@ public class File_Json_ini {
             JsonObject itemObject = jsonObject.getAsJsonObject(key);
             String name = itemObject.get("name").getAsString();
             String IP = itemObject.get("IP").getAsString();
-            String port = itemObject.get("port").getAsString();
+            int port = itemObject.get("port").getAsInt();
             String path = itemObject.get("path").getAsString();
             // 处理物品数据值
-            From form = new From(id, key,name,IP, port, path);
+            From form = new From(id, key, name, IP, port, path);
             formList.add(form);
             id++;
         }
