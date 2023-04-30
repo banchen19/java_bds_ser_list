@@ -19,10 +19,10 @@ public class File_Json {
     static void creat_file_json() {
 // 创建一个新的json对象，包含服务器的相关信息
         JsonObject serverObject = new JsonObject();
-        serverObject.addProperty("name", "填写服务器别名");
-        serverObject.addProperty("IP", "填写服务器IP地址");
-        serverObject.addProperty("port", "填写服务器端口");
-        serverObject.addProperty("path", "填写bds服务器端地址，绝对地址");
+        serverObject.addProperty("name", "填写服务器别名：bedrock_server_mod.exe");
+        serverObject.addProperty("IP", "填写服务器IP地址：暂时不支持远程");
+        serverObject.addProperty("port", "填写服务器端口：19135");
+        serverObject.addProperty("path", "填写bds服务器端地址，绝对地址：E:\\bds1.19.73\\");
 // 创建一个json对象来存储所有的服务器数据
         JsonObject jsonObject = new JsonObject();
         jsonObject.add("server", serverObject);

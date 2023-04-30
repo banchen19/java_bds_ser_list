@@ -1,8 +1,8 @@
 {
   "server": {
-    "name": "bedrock_server_mod.exe",
-    "IP": "填写服务器IP地址",
-    "port": 19135,
-    "path": "E:\\bds1.19.73\\"
+    "name": "填写服务器别名：bedrock_server_mod.exe",
+    "IP": "填写服务器IP地址：暂时不支持远程",
+    "port": "填写服务器端口：19135",
+    "path": "填写bds服务器端地址，绝对地址：E:\\bds1.19.73\\"
   }
 }
